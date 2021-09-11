@@ -23,10 +23,10 @@ namespace dzshka
             Console.Write("Жильцов: " + y + ". \n");
         }
 
-        public int n; // doma
-        public int m; // etajy
-        public int j; // kvartiry
-        public int y; // ludi
+        public int n; // дома
+        public int m; // этажи
+        public int j; // квартиры
+        public int y; // жильцы
         public int CompareTo(object o)
         {
             C_residential_quarter p = o as C_residential_quarter;
