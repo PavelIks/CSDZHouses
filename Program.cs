@@ -56,19 +56,19 @@ namespace dzshka
             }
 
             int max = houses.Max().y;
-            Console.Write("\nСамое большое количество жильцов: " + max + ".\n");
+            Console.Write("\nСамое большое количество жильцов: " + max + ".");
             int min = houses.Min().y;
-            Console.Write("\nСамое меньшее количество жильцов: " + min + ".\n");
+            Console.Write("\nСамое меньшее количество жильцов: " + min + ".\n\n");
 
             for (int i = 0; i < houses.Length; i++)
             {
                 if (houses[i].y == max)
                 {
-                    Console.WriteLine($"Дом с {houses[i].m} количеством этажей и {houses[i].j} количество квартир имеет наибольшее количество жильцов");
+                    Console.WriteLine($"Дом с {houses[i].m} количеством этажей и {houses[i].j} количество квартир имеет наибольшее количество жильцов.");
                 }
                 if (houses[i].y == min)
                 {
-                    Console.WriteLine($"Дом с {houses[i].m} количеством этажей и {houses[i].j} количество квартир имеет наименьшее количество жильцов");
+                    Console.WriteLine($"Дом с {houses[i].m} количеством этажей и {houses[i].j} количество квартир имеет наименьшее количество жильцов.");
                 }
             }
 
