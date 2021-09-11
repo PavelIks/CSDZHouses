@@ -60,6 +60,18 @@ namespace dzshka
             int min = houses.Min().y;
             Console.Write("\nСамое меньшее количество жильцов: " + min + ".\n");
 
+            for (int i = 0; i < houses.Length; i++)
+            {
+                if (houses[i].y == max)
+                {
+                    Console.WriteLine($"Дом с {houses[i].m} количеством этажей и {houses[i].j} количество квартир имеет наибольшее количество жильцов");
+                }
+                if (houses[i].y == min)
+                {
+                    Console.WriteLine($"Дом с {houses[i].m} количеством этажей и {houses[i].j} количество квартир имеет наименьшее количество жильцов");
+                }
+            }
+
             Console.ReadKey();
         }
     }
