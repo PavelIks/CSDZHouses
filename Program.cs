@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Linq;
 
 namespace dzshka
 {
-    class C_residential_quarter : IComparable
+    class C_residential_quarter : IComparable<C_residential_quarter>
     {
         public C_residential_quarter()
         {
@@ -27,17 +28,9 @@ namespace dzshka
         public int m; // этажи
         public int j; // квартиры
         public int y; // жильцы
-        public int CompareTo(object o)
+        public int CompareTo(C_residential_quarter rq)
         {
-            C_residential_quarter p = o as C_residential_quarter;
-            if (p != null)
-            {
-                return this.y.CompareTo(p.y);
-            }
-            else
-            {
-                throw new Exception("Невозможно сравнить два объекта");
-            }
+            return this.y.CompareTo(rq.y);
         }
     }
 
@@ -59,8 +52,13 @@ namespace dzshka
             {
                 Console.Write("Этажей: " + p.m + ", ");
                 Console.Write("Квартир: " + p.j + ", ");
-                Console.Write("Жильцов: " + p.y + ". \n");
+                Console.Write("Жильцов: " + p.y + ".\n");
             }
+
+            int max = houses.Max().y;
+            Console.Write("\nСамое большое количество жильцов: " + max + ".\n");
+            int min = houses.Min().y;
+            Console.Write("\nСамое меньшее количество жильцов: " + min + ".\n");
 
             Console.ReadKey();
         }
