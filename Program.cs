@@ -51,8 +51,8 @@ namespace dzshka
             foreach (C_residential_quarter p in houses)
             {
                 Console.Write("Этажей: " + p.m + ", ");
-                Console.Write("Квартир: " + p.j + ", ");
-                Console.Write("Жильцов: " + p.y + ".\n");
+                Console.Write("\tКвартир: " + p.j + ", ");
+                Console.Write("\tЖильцов: " + p.y + ".\n");
             }
 
             int max = houses.Max().y;
